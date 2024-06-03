@@ -8,10 +8,25 @@ Rentify is a house renting application developed in Java. The application suppor
 - Real Estate Agent can upload house listings with agreements<br>
 - Filter Real Estate Agents based on ratings<br>
 - User account creation and login through Firebase<br><br>
-![Screenshot of Rentify]
-(E:\Saad data\final Year Project\ScreenShots)
+## ScreenShots
+![Screenshot_20240430-111244](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/33580e9e-d356-4197-83fc-3160a5a3e45a)<br><br><br>
+![Screenshot_20240430-111232](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/8f5de8e4-1d87-4753-8a9a-2a16fa419f09)<br><br><br>
+![Screenshot_20240430-111252](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/3e89efa4-5982-49fb-9309-d8c1826eb737)<br><br><br>
+![Screenshot_20240430-114010](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/ee94b7d5-3b48-46d4-89ab-efc933392fd3)<br><br><br>
+![Screenshot_20240430-113430](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/2454d216-db87-4aa9-90f9-58b29729ec41)<br><br><br>
+![Screenshot_2024-04-30-11-34-38](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/e8f90b46-7d7b-42df-ad98-57a3d3962bac)<br><br><br>
+![Screenshot_2024-04-30-11-35-16](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/4df144dd-a801-4166-b873-eee59656cf63)<br><br><br>
+![Screenshot_20240430-113330](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/54cc2959-3952-42e7-9e1d-c6a4d6cd882d)<br><br><br>
+![Screenshot_2024-04-30-13-32-09](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/28b02558-75fd-467f-8fd2-a76be2059aed)<br><br><br>
+![Screenshot_20240430-140149](https://github.com/rjsaad/rentify-House-Renting-app-/assets/171117539/17c6e7bd-c4e4-40ed-832c-1f28c5047504)<br><br><br>
 
-## Getting Started
+
+
+
+
+
+## Getting Started![Uploading Screenshot_20240430-111232.jpg…]()
+
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.<br><br>
 
