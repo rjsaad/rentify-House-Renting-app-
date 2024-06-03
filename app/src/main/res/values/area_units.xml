@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="area_units">
+       <item>Sq.ft</item>
+        <item>Sq.M.</item>
+        <item>Sq.Yd</item>
+        <item>Marla</item>
+        <item>Kanal</item>
+    </string-array>
+
+</resources>

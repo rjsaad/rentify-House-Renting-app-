@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:elevation="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:strokeColor="#E3D7D7"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/agentAGENCY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/ptssans"
+                android:text="Ahmad House Renting Agency"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_18ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <!-- Circular image view -->
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:src="@mipmap/imagepicker"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/white"/>
+
+
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/agentNAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/frameLayout"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Muhammad saad"
+                    android:textColor="@color/headingColor"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/agentADDRESS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentNAME"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/frameLayout"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="@string/lahore"
+                    android:textColor="@color/headingColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:id="@+id/agentCONTACT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentADDRESS"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/frameLayout"
+                    android:text="03465652221" />
+
+                <TextView
+                    android:id="@+id/agentAverageRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentCONTACT"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/frameLayout"
+                    android:text="3.6"
+                    android:textColor="@color/black" />
+
+
+            </RelativeLayout>
+
+            <RatingBar
+                android:id="@+id/agentRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                android:stepSize="0.5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:visibility="gone"
+                android:id="@+id/submitRating"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/green"
+                android:text="submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

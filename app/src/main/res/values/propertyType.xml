@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Property_Type">
+        <item>All</item>
+        <item>Apartment</item>
+        <item>First Floor</item>
+        <item>Flat</item>
+        <item>Farm House</item>
+        <item>Hostel</item>
+        <item>Offices</item>
+        <item>Pent House</item>
+        <item>Small Shops</item>
+        <item>Shops</item>
+        <item>Small Offices</item>
+        <item>Town House</item>
+        <item>Malls</item>
+
+
+    </string-array>
+</resources>

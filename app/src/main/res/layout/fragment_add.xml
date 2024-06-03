@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_home"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home"
+            app:contentScrim="@color/green"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/upload_data"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/upload_data" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resetAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="#406870"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+            <TextView
+                android:id="@+id/add_property"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_110sdp"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="@string/add_a_property"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_140sdp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/source_pro_ltl"
+                android:maxLines="4"
+                android:text="@string/sell_or_rent_your_property_with_ease_list_in_minutes_and_connect_with_interested_buyers_and_tenants_hassle_free"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_nes_lay_bg"
+        app:elevation="0dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_13sdp"
+            tools:context=".fragments.AddFragment">
+
+            <!-- Property Type Card -->
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:drawableStart="@drawable/propery_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="@string/property_type"
+                        android:textColor="@color/headingColor"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/homeLayoutBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:text="@string/homes" />
+
+                        <TextView
+                            android:id="@+id/commercialLayoutBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:text="@string/commercial" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/lineColor" />
+
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_9sdp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/apartment"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/apartment"
+                            android:textColor="@color/add_text_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/firstFloor"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/first_floor"
+                            android:textColor="@color/add_text_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/flat"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:textColor="@color/add_text_color"
+                            android:text="@string/flat"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_9sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/farmhouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/farm_house" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/penthouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/pent_house"
+                            android:textColor="@color/add_text_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/townhouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/town_house"
+                            android:textColor="@color/add_text_color"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_9sdp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/hostel"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/malls"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/malls"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/smalloffices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/small_offices"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_9sdp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/offices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/offices" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/smallShops"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/small_shops"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/shops"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/add_text_color"
+                            android:backgroundTint="@color/buttonFillColor"
+                            android:text="@string/shops"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!-- Property Type Views -->
+            </soup.neumorphism.NeumorphCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#BAB9B9" />
+            <!-- City Card -->
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="10dp"
+                        android:text="@string/city"
+                        android:textColor="@color/headingColor"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/usercity_icon" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/citySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:entries="@array/Cities_list"
+                        app:hintText="@string/select_city" />
+
+                </LinearLayout>
+                <!-- City Views -->
+            </soup.neumorphism.NeumorphCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#BAB9B9" />
+            <!-- Address Card -->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/location"
+                        android:drawablePadding="10dp"
+                        android:paddingStart="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:textSize="@dimen/_13ssp"
+                        android:text="@string/address"
+                        android:textColor="@color/headingColor"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/hint_address"
+                        android:inputType="text"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+                <!-- Address Views -->
+            </soup.neumorphism.NeumorphCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#BAB9B9" />
+            <!-- Price Card -->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/money_icon"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="10dp"
+                        android:text="Monthly Rent"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/hint_price"
+                        android:inputType="number"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+                <!-- Price Card -->
+            </soup.neumorphism.NeumorphCardView>
+
+            <!-- Area Size card -->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/aresize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/area_floor_size_icon"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/area_size"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/enter_range"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/aresize"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/enter_area_size"
+                        android:inputType="number"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <Spinner
+                        android:id="@+id/rangeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/enter_range"
+                        android:entries="@array/area_units" />
+                </RelativeLayout>
+                <!-- Price Card -->
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <LinearLayout
+                android:id="@+id/homeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#BAB9B9" />
+
+                <!-- ROOMS Card -->
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:neumorph_backgroundColor="@color/white"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                    app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:drawableStart="@drawable/room_icon"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:paddingStart="10dp"
+                            android:text="@string/rooms"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                             />
+
+                        <EditText
+                            android:id="@+id/enter_rooms"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@null"
+                            android:hint="@string/hint_roons"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:textSize="@dimen/textSize" />
+                    </LinearLayout>
+                    <!-- Rooms view -->
+                </soup.neumorphism.NeumorphCardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#BAB9B9" />
+                <!-- Bathrooms Card -->
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:neumorph_backgroundColor="@color/white"
+                    app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                    app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:paddingStart="10dp"
+                            android:text="@string/bathrooms"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/bathroomicon" />
+
+                        <EditText
+                            android:id="@+id/enter_bathrooms"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:hint="@string/hint_bathrooms"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:textSize="@dimen/textSize" />
+                    </LinearLayout>
+                    <!-- Bathrooms view -->
+                </soup.neumorphism.NeumorphCardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#BAB9B9" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                    app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_backgroundColor="@color/white"
+                    app:neumorph_shapeType="flat">
+
+                    <EditText
+                        android:id="@+id/enter_discription"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:hint="@string/hint_discription"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:textSize="@dimen/textSize" />
+                    <!-- Description view -->
+                </soup.neumorphism.NeumorphCardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#BAB9B9" />
+
+            </LinearLayout>
+
+            <!-- Email card -->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/email_icon"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:paddingStart="10dp"
+                        android:text="@string/email"
+                        android:textColor="@color/headingColor"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_emailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/hint_emailAddress"
+                        android:inputType="text"
+                        android:paddingStart="10dp"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+                <!-- Email view -->
+            </soup.neumorphism.NeumorphCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#BAB9B9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/start_margin"
+                android:drawableStart="@drawable/call_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="@string/contact_number"
+                android:textColor="@color/headingColor"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/end_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/_92"
+                    android:textColor="@color/headingColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/enter_phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/hint_phoneNumber"
+                    android:inputType="number"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/end_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/_92"
+                    android:textColor="@color/headingColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/enter_phoneNumber2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:hint="@string/hint_phoneNumber"
+                    android:inputType="number"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <!--Commercial layout start -->
+            <LinearLayout
+                android:id="@+id/commercialLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+            </LinearLayout>
+
+            <!--Commercial layout end-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#BAB9B9" />
+            <!-- ImageUpload Card -->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginStart="@dimen/start_margin"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/end_margin"
+                android:layout_marginBottom="10dp"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                android:background="@color/white"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+
+                <ImageView
+                    android:id="@+id/imageGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/imagepicker" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
+
+                    <TextView
+                        android:id="@+id/selectImgeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#406870"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="@string/select_from_gallery"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+                </soup.neumorphism.NeumorphCardView>
+                <!-- ImageUpload view -->
+            </soup.neumorphism.NeumorphCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#BAB9B9" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_gravity="center"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="#406870"
+                    android:text="@string/btn_post"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

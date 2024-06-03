@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/plcHldIV"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerCrop"
+            android:elevation="@dimen/_10sdp"
+            android:src="@mipmap/houseplaceholder" />
+
+        <TextView
+            android:id="@+id/pkrTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pkr"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotoregular"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/plcHldIV"/>
+
+        <TextView
+            android:id="@+id/priceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/pkrTV"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="1 lakh"
+            android:textColor="@color/headingColor"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/addressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceTV"
+            android:layout_toEndOf="@id/plcHldIV"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/upper_chatter"
+            android:textSize="@dimen/_13ssp" />
+
+
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=","
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_below="@id/priceTV"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/addressTV"/>
+
+        <TextView
+            android:id="@+id/cityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceTV"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/comma"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/lahore"
+            android:textColor="@color/headingColor"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/proListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/farm_house"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/plcHldIV"
+            android:layout_below="@id/cityTV"/>
+
+        <TextView
+            android:id="@+id/roomsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proListItem"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@id/plcHldIV"
+            android:drawableLeft="@drawable/room_icon_change"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="8"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <TextView
+            android:id="@+id/bathroomsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proListItem"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@id/roomsTV"
+            android:drawableLeft="@drawable/bathroomiconchange"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="8"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/areaRangeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proListItem"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@id/bathroomsTV"
+            android:drawableLeft="@drawable/area_range"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="8"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/areaUnitTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proListItem"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@id/areaRangeTV"
+            android:drawablePadding="@dimen/_15sdp"
+            android:text="kanal"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#80BAB9B9" />
+
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activites.UpdateActivity">
+
+
+    <EditText
+        android:id="@+id/editTextUpdatedPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Updated Price"
+        android:inputType="numberDecimal"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editTextUpdatedAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated Address"
+        tools:ignore="LabelFor" />
+    <EditText
+        android:id="@+id/editTextUpdatedRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated Rooms"
+        tools:ignore="LabelFor" />
+    <EditText
+        android:id="@+id/editTextUpdatedBathRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated BathRooms"
+        tools:ignore="LabelFor" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editTextUpdatedHomeArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Updated Home Area"
+            tools:ignore="LabelFor" />
+        <Spinner
+            android:id="@+id/editTextUpdatedHomeUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:entries="@array/area_units"/>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editTextUpdateddDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated description"
+        tools:ignore="LabelFor" />
+    <EditText
+        android:id="@+id/editTextUpdatedEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated Email"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editTextUpdatedPhNo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated Phone Number"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editTextUpdatedPhNo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Updated Phone Number"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Update" />
+</LinearLayout>

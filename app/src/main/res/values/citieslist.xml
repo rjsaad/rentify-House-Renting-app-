@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Cities_list">
+        <item>Select city</item>
+        <item>Bagh</item>
+        <item>Bhimber</item>
+        <item>Hattian Bala</item>
+        <item>Haveli</item>
+        <item>Kotli</item>
+        <item>Muzaffarabad </item>
+        <item>Neelum</item>
+        <item>Poonch</item>
+        <item>Rawalakot</item>
+        <item>Sudhanoti</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/profileTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ralewaybold"
+                android:text="@string/profile"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileTxtView"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="sans-serif"
+                android:text="Muhammad Saad"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:src="@drawable/profile" />
+
+
+            <TextView
+                android:id="@+id/profileCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileName"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Muzaffarabad"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+            android:orientation="vertical"
+            tools:context=".fragments.ProfileFragment">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:strokeColor="@color/shadow_light_dark"
+                        app:strokeWidth="@dimen/_1sdp">
+
+                        <TextView
+                            android:id="@+id/realEstBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/realestate_icon"
+                            android:gravity="center"
+                            android:text="@string/real_estate_agent"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:strokeColor="@color/shadow_light_dark"
+                        app:strokeWidth="@dimen/_1sdp">
+
+                        <TextView
+                            android:id="@+id/profileFagFavTxtView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/myfavourites_icon"
+                            android:gravity="center"
+                            android:text="@string/my_favourites"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:strokeColor="@color/shadow_light_dark"
+                        app:strokeWidth="@dimen/_1sdp">
+
+                        <TextView
+                            android:id="@+id/myHomesBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/myhomes_icon"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="@string/my_homes"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:strokeColor="@color/shadow_light_dark"
+                        app:strokeWidth="@dimen/_1sdp">
+
+                        <TextView
+                            android:id="@+id/profileSetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/settingicon"
+                            android:gravity="center"
+                            android:text="@string/profile_settings"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:strokeColor="@color/shadow_light_dark"
+                        app:strokeWidth="@dimen/_1sdp">
+
+                        <TextView
+                            android:id="@+id/android_themes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/theme_icon"
+                            android:gravity="center"
+                            android:text="@string/themes"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:strokeColor="@color/shadow_light_dark"
+                        app:strokeWidth="@dimen/_1sdp">
+
+                        <TextView
+                            android:id="@+id/languageBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/language_icon"
+                            android:gravity="center"
+                            android:text="@string/languages"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="#0D000000"
+                app:neumorph_shadowColorLight="#0D000000"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageProperty"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:src="@drawable/house_home_rent_sign_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:layout_toRightOf="@id/imageProperty"
+                            android:text="@string/looking_for_a_property_to_rent"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/postPropertyProfileFrag"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:backgroundTint="#1904A454"
+                        android:text="@string/post_a_property"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/_8ssp" />
+
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <TextView
+                android:id="@+id/contactUsPrfileFrag"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableLeft="@drawable/contact_us_icon"
+                android:drawablePadding="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="@string/contact_us"
+                android:textColor="#00171f"
+                android:textSize="@dimen/_13ssp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableLeft="@drawable/feedback_us_icon"
+                android:drawablePadding="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="@string/feedback"
+                android:textColor="#00171f"
+                android:textSize="@dimen/_13ssp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableLeft="@drawable/invite_icon"
+                android:drawablePadding="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="@string/invite_friends_to_rentify"
+                android:textColor="#00171f"
+                android:textSize="@dimen/_13ssp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:id="@+id/profileLogoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:drawableStart="@drawable/logout_icon"
+                android:drawablePadding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/_13ssp"
+                android:background="@drawable/custom_buttons"
+                android:text="@string/logout" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

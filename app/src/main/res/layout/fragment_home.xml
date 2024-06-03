@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_home"
+    tools:context=".fragments.HomeFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp">
+
+        <net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home"
+            app:contentScrim="#04A454"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/mainAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:lottie_autoPlay="true"
+
+                app:lottie_rawRes="@raw/main_animation" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_120sdp"
+                android:fontFamily="@font/ptssans"
+                android:text="@string/rentify"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_30ssp"
+                android:textStyle="bold" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_160sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:paddingTop="@dimen/_30sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="#19000000"
+                app:neumorph_shadowColorLight="#00FFFFFF"
+                app:neumorph_shapeType="flat">
+
+
+                <EditText
+                    android:id="@+id/homeFragSearhview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/baseline_search_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="@string/search_here" />
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+        </net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_nes_lay_bg"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10sdp"
+            app:elevation="0dp">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="@color/shadow_light_dark"
+                app:neumorph_shadowColorLight="@color/shadow_light_dark"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:background="#80BAB9B9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/baseline_home_24"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/robotoregular"
+                    android:textStyle="bold"
+                    android:text="@string/homes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:columnCount="3"
+                    android:rowCount="2">
+
+                    <!-- Row 1 -->
+                    <TextView
+                        android:id="@+id/homesApartment"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/apartment_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/apartment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/homesFirstFloor"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/firstflor_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/first_floor"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/homesFlat"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/flat_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/flat"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <!-- Row 2 -->
+                    <TextView
+                        android:id="@+id/homesFarmHouse"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/farm_house_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/farm_house"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/homesPent"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/penthouse_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/pent_house"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/homesTown"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/town_city_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/town_house"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                </GridLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="#0D000000"
+                app:neumorph_shadowColorLight="#0D000000"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:background="#BAB9B9" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/commercial_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/robotoregular"
+                    android:textStyle="bold"
+                    android:text="@string/commercial"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:columnCount="3"
+                    android:rowCount="2">
+
+                    <!-- Row 1 -->
+                    <TextView
+                        android:id="@+id/commHostel"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/hostel_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/hostel"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/commMalls"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/malls_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/malls"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/commSmallOffices"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/office_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/small_offices"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <!-- Row 2 -->
+                    <TextView
+                        android:id="@+id/commOffices"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/office_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/offices"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/commSmallShops"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/retail_shop_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/small_shops"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/commShops"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:drawableTop="@drawable/retail_shop_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/shops"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                </GridLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+
+<!--            <soup.neumorphism.NeumorphCardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:layout_marginRight="@dimen/_10sdp"-->
+<!--                app:neumorph_backgroundColor="@color/white"-->
+<!--                app:neumorph_shadowColorDark="#0D000000"-->
+<!--                app:neumorph_shadowColorLight="#0D000000"-->
+<!--                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"-->
+<!--                app:neumorph_shapeType="flat">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_15sdp"-->
+<!--                    android:layout_marginTop="@dimen/_7sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                    android:drawableLeft="@drawable/location"-->
+<!--                    android:drawablePadding="@dimen/_5sdp"-->
+<!--                    android:fontFamily="@font/robotoregular"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="@string/top_locations"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/_13ssp" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_1sdp"-->
+<!--                    android:layout_marginTop="@dimen/_35sdp"-->
+<!--                    android:background="#BAB9B9" />-->
+
+<!--                <HorizontalScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_55sdp"-->
+<!--                    android:layout_marginStart="@dimen/_10sdp"-->
+<!--                    android:layout_marginTop="@dimen/_45sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                    android:scrollbars="none">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="@dimen/_80sdp"-->
+<!--                            android:layout_height="@dimen/_50sdp"-->
+<!--                            android:background="@drawable/round_border"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Balaper"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/_10ssp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="@dimen/_80sdp"-->
+<!--                            android:layout_height="@dimen/_50sdp"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:background="@drawable/round_border"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Gogra"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/_10ssp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="@dimen/_80sdp"-->
+<!--                            android:layout_height="@dimen/_50sdp"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:background="@drawable/round_border"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Jalalabad"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/_10ssp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="@dimen/_80sdp"-->
+<!--                            android:layout_height="@dimen/_50sdp"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:background="@drawable/round_border"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/upper_chatter"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                    </LinearLayout>-->
+<!--                </HorizontalScrollView>-->
+<!--            </soup.neumorphism.NeumorphCardView>-->
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="#0D000000"
+                app:neumorph_shadowColorLight="#0D000000"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:text="@string/find_a_real_estate_agents"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieAnimationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/lottieanimation" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/seeRealEstateAgent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:backgroundTint="#1904A454"
+                        android:text="@string/view_real_estate_agents"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/white"
+                app:neumorph_shadowColorDark="#0D000000"
+                app:neumorph_shadowColorLight="#0D000000"
+
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageProperty"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:src="@drawable/house_home_rent_sign_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:layout_toRightOf="@id/imageProperty"
+                            android:text="@string/looking_for_a_property_to_rent"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/postProperty"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/round_border"
+                        android:backgroundTint="#1904A454"
+                        android:text="@string/post_a_property"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/_8ssp" />
+
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

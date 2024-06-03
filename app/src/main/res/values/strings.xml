@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">Rentify</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_my_homes">myHomes</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+    <string name="profile">Profile</string>
+    <string name="favourite">Favourite</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="price">Price</string>
+    <string name="hintHomeName">Enter home name</string>
+    <string name="hint_city">Enter city name</string>
+    <string name="hint_address">Enter your Address</string>
+    <string name="hint_price">Enter price</string>
+    <string name="hint_roons">Enter number of rooms</string>
+    <string name="hint_bathrooms">Enter number of bathrooms</string>
+    <string name="hint_discription">Enter description</string>
+    <string name="hint_phoneNumber">Enter phone number</string>
+    <string name="hint_emailAddress">Enter email address</string>
+    <string name="btn_post">Post</string>
+    <string name="select_from_gallery">Select From Gallery</string>
+    <string name="city_icon">City</string>
+    <string name="insertion_successful">Insertion Successful</string>
+    <string name="insertion_failed">Insertion Failed</string>
+    <string name="lahore">Lahore</string>
+    <string name="baths">Bathrooms</string>
+    <string name="beds">Bedrooms</string>
+    <string name="upper_chatter">upper chatter</string>
+    <string name="filters">Filters</string>
+    <string name="reset">Reset</string>
+    <string name="apartment">Apartment</string>
+    <string name="first_floor">First Floor</string>
+    <string name="farm_house">Farm House</string>
+    <string name="flat">Flat</string>
+    <string name="rooms">Rooms</string>
+    <string name="all">ALL</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="property_type">Property Types</string>
+    <string name="send_email">Send Email</string>
+    <string name="login">Login</string>
+    <string name="email_here">Enter Email here</string>
+    <string name="password_here">Enter Password here</string>
+    <string name="create_account">Create Account</string>
+    <string name="show_password">Show password</string>
+    <string name="name_here">Enter Name here</string>
+    <string name="city_here">Enter City name</string>
+    <string name="singup">SignUp</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="rentify" translatable="false">Rentify</string>
+    <string name="discover_your_ideal_rental_with_rentify">Discover Your Ideal Rental with Rentify!</string>
+    <string name="search_here">Search here....</string>
+    <string name="homes">Homes</string>
+    <string name="pent_house">Pent House</string>
+    <string name="town_house">Town House</string>
+    <string name="hostel">Hostel</string>
+    <string name="malls">Malls</string>
+    <string name="small_offices">Small Offices</string>
+    <string name="offices">Offices</string>
+    <string name="small_shops">Small Shops</string>
+    <string name="shops">Shops</string>
+    <string name="top_locations">Top locations</string>
+    <string name="post_a_property">Post a property</string>
+    <string name="looking_for_a_property_to_rent">Looking for a property to rent</string>
+    <string name="recheck_password">Recheck password</string>
+    <string name="commercial">Commercial</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="email">Email</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="_92" translatable="false">+92</string>
+    <string name="pkr" translatable="false">PKR</string>
+    <string name="find_a_real_estate_agents">Find a Real estate agents</string>
+    <string name="view_real_estate_agents">View Real estate agents</string>
+    <string name="financial_details">Financial Details</string>
+    <string name="location_details">Location Details</string>
+    <string name="property_details">Property Details</string>
+    <string name="sell_or_rent_your_property_with_ease_list_in_minutes_and_connect_with_interested_buyers_and_tenants_hassle_free">Sell or rent your property with ease. List in minutes and connect with interested buyers and tenants hassle-free</string>
+    <string name="navigation_drawer_open" translatable="false">Navigation drawer open</string>
+    <string name="navigation_drawer_close" translatable="false">Navigation drawer close</string>
+    <string name="total_price">Total Price</string>
+    <string name="enter_area_size">Enter area size</string>
+    <string name="real_estate_agent">Real estate agent</string>
+    <string name="my_favourites">My Favourites</string>
+    <string name="my_homes">My homes</string>
+    <string name="profile_settings">Profile settings</string>
+    <string name="themes">Themes</string>
+    <string name="languages">Languages</string>
+    <string name="contact_us">Contact us</string>
+    <string name="feedback">Feedback</string>
+    <string name="area_range">Area range</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="ph_no">PH NO:</string>
+    <string name="email_">Email:</string>
+    <string name="interior_features">Interior Features</string>
+    <string name="description">Description</string>
+    <string name="real_estate_agent_profile">Real Estate Agent Profile</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="location">Location</string>
+    <string name="agency_name">Agency Name</string>
+    <string name="cnic_no">CNIC NO</string>
+    <string name="submit">Submit</string>
+    <string name="add_a_property">Add a property</string>
+    <string name="select_city">Select City</string>
+    <string name="area_size">Area size</string>
+    <string name="name_">Name : </string>
+    <string name="contact_">Contact : </string>
+    <string name="address_">Address : </string>
+    <string name="_4">4</string>
+    <string name="real_estate_agents">Real Estate Agents</string>
+    <string name="rating">Rating</string>
+    <string name="invite_friends_to_rentify">Invite Friends to Rentify</string>
+</resources>

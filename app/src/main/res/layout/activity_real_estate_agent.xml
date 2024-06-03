@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".activites.RealEstateAgentActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/real_estate_agent_profile"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_centerHorizontal="true">
+
+            <!-- Circular image view -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@mipmap/imagepicker"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"/>
+
+            <!-- Button overlay -->
+            <TextView
+                android:id="@+id/imageUploadTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/upload_image_icon"
+                android:layout_gravity="center"/>
+
+
+        </FrameLayout>
+
+
+
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout"
+        android:layout_marginTop="16dp"
+        android:hint="@string/name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="16dp"
+        android:hint="@string/contact"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextContact"
+        android:layout_marginTop="16dp"
+        android:hint="@string/location" />
+
+    <EditText
+        android:id="@+id/realEstateAgency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLocation"
+        android:layout_marginTop="16dp"
+        android:hint="@string/agency_name"
+        android:inputType="text" />
+
+
+    <EditText
+        android:id="@+id/editTextCNIC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/realEstateAgency"
+        android:layout_marginTop="16dp"
+        android:hint="@string/cnic_no"
+        android:inputType="text" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCNIC"
+        android:layout_marginTop="24dp"
+        android:background="@color/green"
+        android:text="@string/submit"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

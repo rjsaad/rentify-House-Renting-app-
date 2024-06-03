@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical"
+    tools:context=".activites.LoginActivity">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/mainAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/login" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:neumorph_backgroundColor="@color/white"
+        app:neumorph_shadowColorDark="@color/shadow_light_dark"
+        app:neumorph_shadowColorLight="@color/shadow_light_dark"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/robotoblack"
+            android:text="@string/rentify"
+            android:textColor="#00171f"
+            android:textSize="@dimen/_25ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="#CCB5B1B0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="7dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:hint="@string/email_here"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeErrorColor="@color/black"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/username_icon"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:hint="@string/password_here"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeErrorColor="@color/black"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/userlock_icon"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance2"
+                app:neumorph_shapeType="flat">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/login"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/robotoblack"
+                    android:text="@string/login"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_12ssp" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:neumorph_shadowColorDark="#1A000000"
+                app:neumorph_shadowColorLight="@color/white"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance2"
+                app:neumorph_shapeType="flat">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/createAcc"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/robotoblack"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="@string/singup"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_12ssp" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <ProgressBar
+                android:id="@+id/progressbar_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

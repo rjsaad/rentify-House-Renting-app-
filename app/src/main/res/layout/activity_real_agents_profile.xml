@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/realEstateAgentRoot"
+    android:background="@color/white"
+    tools:context=".activites.RealAgentsProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titRealEstTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/real_estate_agents"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/showAllAgents"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:elevation="20sp"
+            app:cardBackgroundColor="@color/main_color"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="@string/all"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/locationAgents"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:elevation="20sp"
+            app:cardBackgroundColor="@color/main_color"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/sortAgents"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:elevation="20sp"
+            app:cardBackgroundColor="@color/main_color"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/rating"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/agentLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlEstateAgentProRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/searchAgentAnimation"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:layout_centerInParent="true"
+
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/search_animaiton" />
+
+        <TextView
+            android:id="@+id/agentNotFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/your_selected_color"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

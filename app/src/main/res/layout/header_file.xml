@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_150sdp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#406870">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rentify"
+        android:textColor="#2EA3F2"
+        android:textSize="@dimen/_30ssp"
+        android:fontFamily="@font/ptssans"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rent your dream home now!"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/source_pro_ltl"/>
+
+</LinearLayout>

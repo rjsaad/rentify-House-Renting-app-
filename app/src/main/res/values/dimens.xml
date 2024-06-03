@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="add_margin">25dp</dimen>
+    <dimen name="start_margin">20dp</dimen>
+    <dimen name="end_margin">20dp</dimen>
+    <dimen name="icon_size">20dp</dimen>
+</resources>

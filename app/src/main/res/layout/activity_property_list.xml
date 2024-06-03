@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/activityPropertyList"
+    android:background="@color/white"
+    tools:context=".activites.propertyListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/titleProType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="Offices"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/titleProExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="for sale "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/filtersFrag"
+            android:layout_width="86dp"
+            android:layout_height="@dimen/_35sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/main_color"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/all"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/housesLocation"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:elevation="@dimen/_50sdp"
+            app:cardBackgroundColor="@color/main_color"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/housesRooms"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_35sdp"
+            app:cardBackgroundColor="@color/main_color"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/beds"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/housesBaths"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/main_color"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeColor="@color/lineColor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/baths"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <View
+        android:id="@+id/homesLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/searchAnimation"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/search_animaiton" />
+
+        <TextView
+            android:id="@+id/notFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:textColor="@color/your_selected_color"
+            android:textSize="30sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

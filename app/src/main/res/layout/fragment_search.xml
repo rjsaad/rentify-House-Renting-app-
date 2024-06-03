@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/searchContainer"
+        tools:context=".fragments.SearchFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/backicon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/filters"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/resetBtn"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:text="@string/reset"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_15ssp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/lineColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/propertytype_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/property_type"
+            android:textColor="#000000"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/homesSearchTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="sans-serif"
+                android:text="@string/homes"
+                android:textSize="@dimen/_15ssp" />
+
+            <TextView
+                android:id="@+id/commercialSearchTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:fontFamily="sans-serif"
+                android:text="@string/commercial"
+                android:textSize="@dimen/_15ssp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/lineColor" />
+
+        <HorizontalScrollView
+            android:id="@+id/homeshorlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:scrollbars="none"
+            android:visibility="visible"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/allPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/select_all_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/all"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/apparPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/apartment_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/apartment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/flatPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/flat_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/flat"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/firstFloorPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/firstflor_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/first_floor"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/farmPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/farm_house_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/farm_house"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pentPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/penthouse_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/pent_house"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/townPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/town_city_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/town_house"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/commercialHorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/allcommPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/select_all_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/all"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hostelPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/hostel_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/hostel"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mallsPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/malls_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/malls"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/smallofficesPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/apartment_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/small_offices"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/officesPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="#F5F5F5"
+                    android:drawableLeft="@drawable/office_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/offices"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/smallShopsPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/apartment_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/small_shops"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/shopsPropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/custom_buttons"
+                    android:backgroundTint="@color/buttonFillColor"
+                    android:drawableLeft="@drawable/retail_shop_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/shops"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/lineColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/money_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/iniPriceRange"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/finalPricRange"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="Any" />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/lineColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:drawableLeft="@drawable/area_floor_size_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/area_range"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/rangeSearchableSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:entries="@array/area_units"
+                app:hintText="Area units" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/intFragAreaRange"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/finalFragAreaRange"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="Any" />
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/roomsView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="#BAB9B9" />
+
+
+        <TextView
+            android:id="@+id/roomsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/room_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/rooms"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/oneBedBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_1"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/twoBedBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_2"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/threeBedBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_3"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fourBedBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_4"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bathroomsView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/lineColor" />
+
+        <TextView
+            android:id="@+id/bathroomsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/bathroomicon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/bathrooms"
+            android:textColor="#00171f"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/oneBathBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_1"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/twoBathBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_2"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/threeBathBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_3"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fourBathBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/buttonFillColor"
+                android:text="@string/_4"
+                android:textColor="@color/blackDim"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="#BAB9B9" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/srchFiltrBtn"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/custom_buttons"
+            android:backgroundTint="@color/green"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
+</ScrollView>
