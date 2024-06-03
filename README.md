@@ -43,7 +43,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-- **Muhammad Saad** - *Initial work* - [Muhammad Saad's GitHub Profile](https://github.com/your-username)<br><br>
+- **Muhammad Saad** - *Initial work* - [Muhammad Saad's GitHub Profile](https://github.com/rjsaad)<br><br>
 
 See also the list of [contributors](https://github.com/your-username/rentify/contributors) who participated in this project.<br><br>
 
