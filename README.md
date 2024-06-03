@@ -39,13 +39,11 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your-username/rentify/tags).<br><br>
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/rjsaad/rentify/tags).<br><br>
 
 ## Authors
 
-- **Muhammad Saad** - *Initial work* - [Muhammad Saad's GitHub Profile](https://github.com/rjsaad)<br><br>
-
-See also the list of [contributors](https://github.com/your-username/rentify/contributors) who participated in this project.<br><br>
+- **Muhammad Saad** - *Initial work* - [Muhammad Saad's GitHub Profile](https://github.com/rjsaad)
 
 ## License
 
@@ -54,5 +52,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used<br>
-- Inspiration<br>
-- etc<br><br>
+- Inspiration
