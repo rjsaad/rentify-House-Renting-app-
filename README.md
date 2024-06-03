@@ -8,6 +8,8 @@ Rentify is a house renting application developed in Java. The application suppor
 - Real Estate Agent can upload house listings with agreements<br>
 - Filter Real Estate Agents based on ratings<br>
 - User account creation and login through Firebase<br><br>
+![Screenshot of Rentify]
+(relative/E:\Saad data\final Year Project\ScreenShots)
 
 ## Getting Started
 
